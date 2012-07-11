@@ -1,0 +1,20 @@
+name: exRay
+date: 2008
+tech: Windows, C++, WinAPI
+category: Graphics
+description: Multi-threaded raytracer
+icon: /images/icons/exray.png
+images:
+  - exray-s1.png
+  - exray-s2.png
+  - exray-s3.png
+files:
+  - { link: /files/exray.zip, title: Download (SSE3 required) }
+  - { link: https://github.com/Nadrin/exray, title: Source code }
+body: |
+  <p>exRay is a classic recursive raytracing renderer I've developed as a personal research project during my BSc studies.</p>
+  <p>The algorithm presented here is a classic Whitted ray-tracing extended with some very basic Monte Carlo like sampling. <b>The rendering process is fully multithreaded with almost perfect scaling</b> (rendering time halves when number of participating CPU cores is multiplied by two) and the image is synthesized from top to bottom with each worker thread rendering a single scanline at a time.</p>
+  <p><b>The design is strongly object-oriented with fundamental data structure being the scene graph</b>. exRay follows <q>open/closed</q> principle with only a handful of core classes; it is as such easily extendable with new capabilities such as: new geometry types for rendering different kinds of objects in the scene or new shaders allowing different illumination models to be simulated. The scene graph itself can be fully described using the scene description language which is also the standard input file format used.</p>
+  <p><b>Implemented geometry classes include:</b> planes, spheres and axis-aligned boxes. <b>The renderer supports:</b> phong shading, reflections, transparency and refraction, hard and soft shadows, area lights, blurry reflections, regular-grid and Monte Carlo sampling and image supersampling for antialiasing.</p>
+  <p>However intended as a learning exercise exRay is relatively simple: it cannot render arbitrary triangular meshes and does not implement any intersection acceleration structure such as a KD-tree. </p>
+ 

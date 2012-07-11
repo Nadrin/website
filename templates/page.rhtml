@@ -1,0 +1,15 @@
+% require 'common.rb'
+<!-- TEMPLATE: page -->
+<div class="page-title">
+  <h1><%= $yml['title'] %></h1>
+  <span class="close">
+    <a href="/"></a>
+  </span>	
+</div>
+<div class="text-block">
+  <% if $yml['link'] then %>
+  <p>Link to: <a href="<%= $yml['link'] %>"><%= $yml['link'] %></a></p>
+  <% else %>
+  <%= $yml['body'] %>
+  <% end %>
+</div><!-- text-block -->

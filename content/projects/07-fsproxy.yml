@@ -1,0 +1,15 @@
+name: FSproxy
+date: 2009
+tech: Windows, C, WinAPI, QEMU
+category: Utilities
+description: Linux filesystems on Windows
+icon: /images/icons/fsproxy.png
+images:
+  - fsproxy-s1.png
+files:
+  - { link: http://fsproxy.masterm.org, title: Homepage }
+body: |
+  <p><b>FSproxy is a small application that runs in the background and allows a user of Windows operating system access files on various Linux partitions on the local machine.</b> It consists of two parts: the server process and the agent application.</p>
+  <p><b>The server process</b> is the <a href="http://wiki.qemu.org/Main_Page">QEMU emulator</a> running with administrative privileges with physical block devices attached as virtual HDDs. A minimal Linux system boots up in the emulator, enumerates and mounts all known filesystems on those HDDs and then publishes each partition via <a href="http://en.wikipedia.org/wiki/Samba_(software)">Samba</a> protocol on a virtual TUN/TAP interface. Data then can be accessed from within Windows at <q>\\fsproxy</q> address using Windows Explorer. A minimal HTTP server running CGI control application is also started for the purpose of communicating with FSproxy agent.</p>
+  <p><b>The agent application</b> acts as a GUI for the server process. It presents the user with a setup dialog allowing selection of which physical hard drives are visible to FSproxy and configuration of the virtual network interface. Additional tray icon shows current server status and allows for starting/stopping the server process.</p>
+  <p>FSproxy has limited performance due to considerably significant emulation overhead while performing I/O operations. It can however stustain transfers of about 10 MB/s on a moderately fast computer and has low memory footprint.</p>

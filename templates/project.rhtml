@@ -1,0 +1,66 @@
+% require 'common.rb'
+<!-- TEMPLATE: project -->
+<div class="page-title">
+  <h1><%= $yml['name'] %> (<%= $yml['date'] %>)</h1>
+  <h5 class="tech"><%= $yml['tech'] %></h5>
+  <span class="close">
+    <a href="/"></a>
+  </span>
+</div>
+
+<% if $yml['vimeo'] then %>
+<div class="work-preview-video">
+  <iframe src="http://player.vimeo.com/video/<%= $yml['vimeo'] %>" 
+	  width="725" height="408"
+	  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+  </iframe>
+</div><!-- work-preview-video -->
+<% end %>
+
+<% if $yml['images'] then %>
+<div class="work-preview">
+  <% if $yml['images'].size > 1 %>
+  <div id="cycle">
+    <ul>
+      <% for img in $yml['images'] %>
+      <li>
+	<% dim = Dimensions.dimensions("data/images/#{img}") %>
+	<img src="/images/<%= img %>" alt="" width="<%= dim[0] %>" height="<%= dim[1] %>" />
+      </li>
+      <% end %>
+    </ul>
+    <div class="pager">
+      <div></div>
+    </div>
+  </div>
+  <% else %>
+    <% dim = Dimensions.dimensions("data/images/#{$yml['images'][0]}") %>
+    <img src="/images/<%= $yml['images'][0] %>" alt="" width="<%= dim[0] %>" height="<%= dim[1] %>" />
+  <% end %>
+</div><!-- work-preview -->
+<% end %>
+
+<div class="work-info">
+  <div class="text">
+    <%= $yml['body'] %>
+  </div>
+</div><!-- work-info -->
+
+<% if $yml['files'] then %>
+<dl class="tabs">
+  <% $yml['files'].each_with_index { |file,i| %>
+  <% if i == 0 then %>
+  <dt class="active"><%= file['title'] %></dt>
+  <dd class="active">
+  <% else %>
+  <dt><%= file['title'] %></dt>
+  <dd>
+  <% end %>
+    <div class="tab-content">
+      <img src="/themes/default/images/icon-<%= file['icon'] or "file" %>.png" alt="" />
+      <a class="link-dark" href="<%= file['link'] %>"><%= file['link'] %></a>
+    </div>
+  </dd>
+  <% } %>
+</dl>
+<% end %>

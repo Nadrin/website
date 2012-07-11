@@ -1,0 +1,16 @@
+name: Awakening
+date: 2006
+tech: Windows, C++, OpenGL, FMOD Ex API
+category: Demoscene
+description: Fantasy themed music disks
+icon: /images/icons/awakening.png
+images:
+  - awakening-s1.png
+  - awakening-s2.png
+files:
+  - { link: /files/awakening.zip, title: Download (part 1) }
+  - { link: /files/awakening2.zip, title: Download (part 2) }
+body: |
+  <p><q>Awakening</q> is a set of two fantasy themed digital music disks featuring music from Karol Sabat accompanied by excellent hand-drawn paintings by Maciej Wojtala, Marcin Jakubowski and Łukasz Śliwiński.</p>
+  <p><b>The interactive player is a native Windows application and uses <q>shadowArts</q> &ndash; an OpenGL GUI toolkit written specifically for the <q>Awakening</q> project.</b> No existing GUI library seemed like a good tool for the job at the time so I created my own. First version took several months to develop and included support for commonly used UI elements like text labels, buttons and context menus The API drawed mostly from Qt design, however callbacks and events were done in pure C++ using function objects (functors). This approach turned out to be elegant and easy to use, and most of all, did not require custom C++ preprocessor like Qt did.</p>
+  <p>Both versions supported fully themable widgets with means to animate them. Later, version 1.1 used in <q>Awakening: part 2</q>, added basic animation framework and timers eliminating the need to do animations <q>by hand</q>. No input widgets were ever written simply because there was no need for them.</p>

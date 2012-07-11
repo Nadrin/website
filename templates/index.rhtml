@@ -1,0 +1,29 @@
+% require 'common.rb'
+<!-- TEMPLATE: index -->
+<div class="portfolio" id="portfolio">
+  <ul>
+    <% for file in Pathname.glob('content/projects/*.yml').sort %>
+    <% project = YAML.load_file(file) %>
+    <li class="<%= project['category'] %>">
+      <div>
+	<a href="projects/<%= File.basename(file, '.yml')[3..-1] %>">
+	  <span class="pattern"></span>
+	  <span class="corner tl"></span>
+	  <span class="corner br"></span>
+	  <img src="<%= project['icon'] or "/themes/default/images/image-default.png" %>" alt="" />
+	  <span class="title">
+	    <% if project['name'].length > 20 then %>
+	    <b><%= project['name'][0..20] %>&hellip;</b>
+	    <% else %>
+	    <b><%= project['name'] %></b>
+	    <% end %>
+	    <%= project['description'] %>
+	  </span>
+	</a>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div><!-- portfolio -->
+
+

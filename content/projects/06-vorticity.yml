@@ -1,0 +1,14 @@
+name: Vorticity / Arsen
+date: 2010
+tech: Windows/Linux, C++, OpenGL, NVIDIA Cg
+category: Graphics
+description: OpenGL 3D Engine
+icon: /images/icons/arsen.png
+vimeo: 45567632
+files:
+  - { link: https://github.com/MiKom/vorticity, title: Source code }
+body: |
+  <p><b>Vorticity is a OpenGL 3D engine written in C++.</b> I've started early drafts and development work in 2009 and then continued in 2010 during the <q>Arsen</q> augmented reality game project. Also in 2010 Miłosz Kosobucki joined the project and helped me write the I/O subsystem of the engine. He now maintains the CMake build system and X11 port of the platform-specific bits.</p>
+  <p><b>The engine is heavily based on a dynamic scene graph concept where each node performs computations that lead to the synthesis of the final frame image.</b> This approach allows for great flexibiity in expanding the rendering pipeline by addition of Node classes like new light, geometry types or animation controllers. The OpenGL renderer class uses <a href="http://developer.nvidia.com/cg-toolkit">NVIDIA Cg Toolkit</a> for parsing CgFX effect files which allows for fully programmable shading including multipass shaders or technique selection most suitable for given hardware.</p>
+  <p>Support for OpenGL frame-buffer objects combined with a simple post-processing pipeline allows for effects such as full screen gaussian bur or HDR rendering with bloom effect in bright areas.</p>
+  <p>Triangular meshes suitable for use in the engine are stored in our own native format. An exporter is provived for 3D Studio MAX.</p>

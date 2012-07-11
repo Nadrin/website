@@ -1,0 +1,18 @@
+name: CLIPT
+date: 2012
+tech: Linux, C, OpenCL, GTK 3
+category: Graphics
+description: OpenCL Image Toolkit
+icon: /images/icons/clipt.png
+files:
+  - { link: https://github.com/MiKom/clipt, title: Source code }
+images:
+  - clipt-s1.png
+  - clipt-s2.png
+  - clipt-s3.png
+  - clipt-s4.png
+body: |
+  <p><b>This project aims to be a simple appliation with various implementations of image processing algorithms implemented mainly on GPU in one place.</b> It's GUI is made with GTK3, with image rendering through OpenGL and operations in OpenCL. This project was started by me and Miłosz Kosobucki as a programming assignment for Image processing class that took place in winter semester in 2011/2012 acadaemic year at Adam Mickiewicz University of Poznań under supervision of Mr Wojciech Kowalewski PhD.</p>
+  <p>I was responsible for the main program structure (subsystem initialization, configuration handling, main loop), OpenCL initialization code, a robust OpenGL/OpenCL buffer sharing system and a plugin API. I also wrote a universal GPU-accelerated convolution filter.</p>
+  <p>User interface is implemented using GTK+3. However, the canvas on which the images are drawn is an OpenGL window. Since GTK3 doesn't have any support for embedding OpenGL, it's done by a nasty hack, that takes native X11 window handler and tries to establish GLX context in that window.</p>
+  <p>To avoid sending big images back and forth through PCI Express bus CLIPT uses buffer sharing between OpenCL and OpenGL introduced in OpenCL 1.1. Internal image format is 32 bits per channel RGB stored as floats. This fact establishes 1GB of VRAM as a reasonable minimum when working with large (4k x 4k) images, since two copies of the image must be stored in GPU memory. When user previews some filter/operation and adjusts parameters in real time, the data is not leaving the GPU. This makes interaction with program more smooth. Only when the user hits Apply on some effect window, the result of the GPU computation is sent to RAM.</p>

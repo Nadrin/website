@@ -1,0 +1,12 @@
+name: A subjective experience...
+date: 2005
+tech: Windows, C++, OpenGL
+category: Demoscene
+description: 16s real-time animation
+vimeo: 14160762
+icon: /images/icons/experience.png
+files:
+  - { link: /files/experience.zip, title: Download }
+body: |
+  <p>A 16 seconds demo made for <a href="http://abstract2005.aei.pl/">Abstract 2005</a> science and computer graphics festival in Gliwice, Poland. It features several fast camera takes on a classic still life scene rendered in real-time with OpenGL and ends with a joke <a href="http://en.wikipedia.org/wiki/Guru_Meditation">error message</a> &ndash; a reference to Amiga computer.</p>
+  <p><b>A simple 3D engine used in this demo was my first serious approach to graphics programming.</b> Using fixed-function pipeline it is capable of per vertex lighting with up to 8 lights (4 are used in the actual demo), multitexturing, fullscreen blur and simple particle effects with billboarded sprites. Scene geometry is read from 3DS files exported from 3D Studio MAX. Camera animation was done using a simple scripting language which was later compiled to an array of precomputed modelview matrices at constant time intervals.</p>

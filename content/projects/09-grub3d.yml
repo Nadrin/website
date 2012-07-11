@@ -1,0 +1,15 @@
+name: Grub 3D
+date: 2009
+tech: C, Grub 2 bootloader
+category: Graphics
+description: 3D maze crawler in GRUB
+icon: /images/icons/grub3d.png
+images:
+  - grub3d-s1.png
+  - grub3d-s2.png
+files:
+  - { link: /files/grub3d.iso, title: Demo ISO }
+body: |
+  <p><b>Grub 3D is a proof-of-concept pseudo-3D maze crawler that can run as a GRUB2 module.</b> It runs in legacy VESA 2.0 mode. Graphics is displayed by casting rays through a 2D regular grid of blocks. Each intersection point represents a single vertical line in the framebuffer - the further the point from the camera, the smaller each line gets thus an emulation of perspective projections is achieved. Textures are drawn with nearest-neighbour filtering and affine projection. Experimental support for non-animated sprites is present in the code but not used in the demo level.</p>
+  <p>Levels are defined as C arrays directly in the source and textures/sprites are compiled into the module file. A simple map editor runs on Linux and can read/write internal map format or export to C header file.</p>
+  <p>After booting the demo CD image type <q>grub3d</q> at the GRUB2 rescue prompt to play.</p>

@@ -1,0 +1,63 @@
+% require 'common.rb'
+<!-- TEMPLATE: begin -->
+
+<body>
+  <div id="main"> 
+    <div id="sidebar">	
+
+      <div class="logo">
+	<a href="/"><img src="/themes/default/images/logo.png" alt="" /></a>
+      </div>
+
+      <div class="menu" id="menu">
+	<ul>
+	  <li><a href="/"><%= $yml['homepage'] %></a></li>
+	  <% for file in Pathname.glob('content/pages/*.yml').sort %>
+	  <% item = File.basename(file, ".yml")[3..-1] %>
+	  <% item_yml = YAML.load_file(file) %>
+	    <% if item_yml['link'] then %>
+	    <li><a href="<%= item_yml['link'] %>"><%= item_yml['title'] %></a></li>
+	    <% else %>
+	    <li><a href="/<%= item %>"><%= item_yml['title'] %></a></li>
+	    <% end %>
+	  <% end %>
+	</ul>
+      </div>
+    </div><!-- sidebar -->
+
+    <div id="column">
+      <div id="header">
+	<div class="header">
+
+	  <div class="global-title">
+	    <h1><%= $yml['pagetitle'] %></h1>
+	  </div>
+
+	  <% if $type == "index" then %>
+	  <div class="filter">
+	    <div class="label">	
+	      works:
+	    </div>
+	    
+	    <div class="dropdown" id="workType">
+	      <div>
+		<span>Select type</span>
+	      </div>
+	      <ul>
+		<% categories = Set.new %>
+		<% for file in Pathname.glob('content/projects/*.yml').sort %>
+		<% catname = YAML.load_file(file)['category']; next if not categories.add?(catname) %>
+		<li><a href="<%= catname %>"><%= catname %></a></li>
+		<% end %>
+	      </ul>
+	    </div>
+
+	    <div class="reset">
+	      <a href="#"></a>
+	    </div>
+	  </div><!-- filter -->
+	  <% end %>
+
+	</div><!-- header -->
+      </div><!-- header -->
+      <div id="content">

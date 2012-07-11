@@ -1,0 +1,16 @@
+name: Drone
+date: 2007
+tech: Windows, C++, OpenGL, BASS audio library
+category: Demoscene
+description: Ambient music disk
+icon: /images/icons/drone.png
+images:
+  - drone-s1.png
+  - drone-s2.png
+  - drone-s3.png
+files:
+  - { link: /files/drone.zip, title: Download }
+body: |
+  <p>A digital music disk created in collaboration with <a href="http://www.lastfm.pl/music/New+Age+Beats">New Age Beats</a> music group. Over 1.5 hours of gloom and atmospheric ambient music served with a very unique imagery.</p>
+  <p><b>This project uses a final 1.2 version of <q>shadowArts</q> as it's player engine.</b> Over the versions used in the <a href="/projects/awakening">Awakening</a> project I've added several new features including new setup dialog, support for bitmap fonts, video playback capabilities and a custom waveform visualizer widget.</p>
+  <p><b>Drone</b> marks the end of life for the <q>shadowArts</q> engine which was actively developed for almost 2 years. Version 1.2 consists of about 10k lines of C++.</p>
