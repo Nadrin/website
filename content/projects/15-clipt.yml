@@ -5,7 +5,7 @@ category: Graphics
 description: OpenCL Image Toolkit
 icon: /images/icons/clipt.png
 files:
-  - { link: https://github.com/MiKom/clipt, title: Source code }
+  - { link: 'https://github.com/MiKom/clipt', title: Source code }
 images:
   - clipt-s1.png
   - clipt-s2.png

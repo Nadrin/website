@@ -10,7 +10,7 @@ images:
   - exray-s3.png
 files:
   - { link: /files/exray.zip, title: Download (SSE3 required) }
-  - { link: https://github.com/Nadrin/exray, title: Source code }
+  - { link: 'https://github.com/Nadrin/exray', title: Source code }
 body: |
   <p>exRay is a classic recursive raytracing renderer I've developed as a personal research project during my BSc studies.</p>
   <p>The algorithm presented here is a classic Whitted ray-tracing extended with some very basic Monte Carlo like sampling. <b>The rendering process is fully multithreaded with almost perfect scaling</b> (rendering time halves when number of participating CPU cores is multiplied by two) and the image is synthesized from top to bottom with each worker thread rendering a single scanline at a time.</p>

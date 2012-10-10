@@ -4,7 +4,7 @@
 .PHONY: all clean pages data
 
 DESTDIR ?= /home/masterm/www/homepage
-DATADIR ?= /home/masterm/store/files
+DATADIR ?= /home/masterm/www/files
 
 all: pages
 

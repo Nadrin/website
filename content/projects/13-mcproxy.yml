@@ -5,7 +5,7 @@ category: Networking
 description: Minecraft protocol framework
 icon: /images/icons/mcproxy.png
 files:
-  - { link: https://github.com/Nadrin/mcproxy, title: Source code }
+  - { link: 'https://github.com/Nadrin/mcproxy', title: Source code }
 body: |
   <p><b>mcproxy is a modular Minecraft protocol proxy daemon written in C.</b> Its main use is to manipulate and/or analyze Minecraft protocol data in real-time on either server- or client-side being completely transparent to both parties.</p>
   <p><b>A functional proxy consists of two parts: the core (mcproxy binary) and at least one handler library.</b> The core takes care of networking, threading, protocol decoding and encoding, memory management etc. A handler library registers a set of callback functions to the core which get called whenever specific event occurs (for example new client connects or specific type of protocol packet arrives).  It is here where required logic has to be implemented. The core publishes its API for use by handler libraries in the form of a static library (libproxyapi) which all handler libraries are required to link to.

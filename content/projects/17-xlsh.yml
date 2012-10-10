@@ -5,8 +5,8 @@ category: Utilities
 description: eXtended Login Shell
 icon: /images/icons/xlsh.png
 files:
-  - { link: https://github.com/Nadrin/xlsh, title: Source code }
-  - { link: https://github.com/Nadrin/xlsh/wiki, title: Wiki }
+  - { link: 'https://github.com/Nadrin/xlsh', title: Source code }
+  - { link: 'https://github.com/Nadrin/xlsh/wiki', title: Wiki }
 body: |
   <p><b>This project aims to provide a convenient replacement for standard login program found on many POSIX compliant systems.</b> It provides a basic login shell, similar to one found in GNU HURD, that apart from performing a login action, can also reboot or shutdown the system. It uses PAM for authorization and session management.</p>
   <p>When desired using the <q>xlshd</q> daemon it can also sucesfully replace a display manager such as GDM.</p>
