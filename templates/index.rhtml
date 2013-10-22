@@ -2,7 +2,7 @@
 <!-- TEMPLATE: index -->
 <div class="portfolio" id="portfolio">
   <ul>
-    <% for file in Pathname.glob('content/projects/*.yml').sort %>
+    <% for file in Pathname.glob('content/projects/*.yml').sort.reverse %>
     <% project = YAML.load_file(file) %>
     <li class="<%= project['category'] %>">
       <div>

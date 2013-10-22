@@ -2,7 +2,7 @@ name: exRay
 date: 2008
 tech: Windows, C++, WinAPI
 category: Graphics
-description: Multi-threaded raytracer
+description: CPU multi-threaded raytracer
 icon: /images/icons/exray.png
 images:
   - exray-s1.png

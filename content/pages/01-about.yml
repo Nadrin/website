@@ -1,6 +1,7 @@
 title: About me
 body: |
-  <p>Hello, my name is <b>Michał Siejak</b> and I'm a hobbyist programmer. This website serves as a showcase of my selected works. 
-  <br />If you'd like to hire me you can download my current resume <a href="/files/resume_en.pdf">from here</a>.</p>
-  <p>Solving interesting problems has been a hobby and a way of life of mine for many years now. I'm a strong believer in following <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">the hacker way</a> and a supporter of <a href="http://www.fsf.org/">open source software movement</a>. My main fields of interest include computer graphics, game development and general-purpose GPU computing. I'm also a co-founder of <a href="http://www.asenses.org/">ALLien Senses</a> demoscene group.</p>
+  <p><img src="/images/me.jpg" alt="[my face]" style="float:right; margin-left:20pt;" />
+  Hello, my name is <b>Michał Siejak</b> and I'm a hobbyist programmer. This website serves as a showcase of my selected works.
+  If you'd like to hire me you can download my current resume <a href="/files/resume_en.pdf">from here</a>.</p>
+  <p>Solving interesting problems has been a hobby and a way of life of mine for many years now. I'm a strong believer in following <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">the hacker way</a> and a supporter of <a href="http://www.fsf.org/">open source software movement</a>. My main fields of interest include computer graphics, game development and general-purpose GPU computing. I'm also a co-founder of <a href="http://www.pouet.net/groups.php?which=4589">ALLien Senses</a> demoscene group.</p>
   <p>Outside of the IT world I enjoy a variety of good music and I'm an avid science-fiction geek. I also frequently spend my past-time doing live action role playing.</p>

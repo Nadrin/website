@@ -3,7 +3,7 @@
 .DEFAULT_GOAL = all
 .PHONY: all clean pages data
 
-DESTDIR ?= /home/masterm/www/homepage
+DESTDIR ?= /home/masterm/www/root
 DATADIR ?= /home/masterm/www/files
 
 all: pages
