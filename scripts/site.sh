@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # www.siejak.pl website script
 set -e
 [ -z "$1" ] && exit 1
@@ -8,7 +8,7 @@ export DESTDIR="$1"
 export RUBYLIB=$(pwd)/scripts
 
 # programs
-erb=/usr/bin/erb
+erb=/usr/local/bin/erb
 postproc='egrep -v ^[[:space:]]*$'
 
 # paths
@@ -24,40 +24,43 @@ tpl_page=templates/page.rhtml
 tpl_project=templates/project.rhtml
 
 # functions
-function genpage
-{
+genpage () {
     if [ "$1" = "config.yml" ]; then
 	page=$TYPE
     else
 	page_file=$(basename $1)
 	page_file="${page_file%.*}"
-	page="${page_file:3}"
+	page="${page_file#*-}"
     fi
 
     echo -n "$TYPE: "
-    if [ -z "$PREFIX" ]; then
+    if [ -z "$PDIR" ]; then
 	echo "/$page.html"
     else
-	echo "/$PREFIX/$page.html"
+	echo "/$PDIR/$page.html"
     fi
 
-    YML=config.yml $erb $tpl_header | $postproc > $DESTDIR/$PREFIX/$page.html
-    YML=config.yml $erb $tpl_begin | $postproc >> $DESTDIR/$PREFIX/$page.html
-    YML=$1 $erb "templates/$TYPE.rhtml" | $postproc >> $DESTDIR/$PREFIX/$page.html
-    YML=config.yml $erb $tpl_end | $postproc >> $DESTDIR/$PREFIX/$page.html
+    env YML=config.yml $erb $tpl_header | $postproc > $DESTDIR/$PDIR/$page.html
+    env YML=config.yml $erb $tpl_begin | $postproc >> $DESTDIR/$PDIR/$page.html
+    env YML=$1 $erb "templates/$TYPE.rhtml" | $postproc >> $DESTDIR/$PDIR/$page.html
+    env YML=config.yml $erb $tpl_end | $postproc >> $DESTDIR/$PDIR/$page.html
 }
 
 # generate site index
-TYPE=index genpage "config.yml"
+export TYPE=index
+genpage "config.yml"
 
 # generate static pages
+export TYPE=page
 for page in $page_dir/*.yml; do
-    TYPE=page genpage $page
+    genpage $page
 done
 
 # generate project pages
+export TYPE=project
+export PDIR=projects
 for project in $proj_dir/*.yml; do
-    TYPE=project PREFIX=projects genpage $project
+    genpage $project
 done
 
 exit 0
