@@ -1,0 +1,20 @@
+name: BENDER-I Emulator
+date: 2015
+tech: Linux/Windows, C++, SDL2, 6502 Assembly
+category: Retro
+description: 6502-based computer system
+icon: /images/icons/b1.png
+images:
+  - b1-s1.png
+  - b1-s2.png
+  - b1-s3.png
+files:
+  - { link: '/files/b1/b1-manual.pdf', title: Manual }
+  - { link: 'https://github.com/Nadrin/B1', title: Source code }
+  - { link: '/files/b1/b1-win64.zip', title: Win64 Emulator Binary }
+  - { link: '/files/b1/b1-win32.zip', title: Win32 Emulator Binary }
+  - { link: '/files/b1/b1-winsdk.zip', title: B1 Windows SDK }
+body: |
+  <p><b>BENDER-I (or B1 for short) is a fictional computer system I've created for fun and profit (well, maybe only for fun).</b> The name is, of course, a tribute to <a href="http://en.wikipedia.org/wiki/Bender_(Futurama)">Bender Bending Rodríguez</a>, a fictional character in the animated series Futurama, who happens to be powered by the same CPU as B1 computer.</p>
+  <p>B1 computer system consists of the venerable <a href="http://en.wikipedia.org/wiki/MOS_Technology_6502">MOS Technology 6502</a> microprocessor, 64kB of RAM, a video processing unit providing a text-mode 40 by 25 character display and a simple 8-bit mono sound generator.</p>
+  <p>Currently there are no hardware implementations of the B1 computer. The reference, and only, implementation is the B1 Emulator.</p>
