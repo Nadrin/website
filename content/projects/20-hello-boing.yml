@@ -1,0 +1,14 @@
+name: Hello Boing
+date: 2015
+tech: Amiga OCS, m68k assembly
+category: Retro
+description: Amiga Executable Graphics
+icon: /images/icons/hello_boing.png
+images:
+  - hello_boing-s1.png
+files:
+  - { link: '/files/hello_boing.zip', title: Binary }
+  - { link: 'http://www.pouet.net/prod.php?which=65657', title: Pouet Link }
+body: |
+  <p><b>Executable Graphics competition entry that won 1st place at <a href="http://decrunch.org/">Decrunch 2015</a> demo-party in Wroclaw.</b></p>
+  <p>Written in hand-optimized Motorola 68000 assembly it renders a raytraced <b>Boing Ball</b> (unofficial Amiga logo) with ambient occlusion in under 30 seconds on stock <a href="https://en.wikipedia.org/wiki/Amiga_500">Commodore Amiga 500</a> with 512kB of Chip RAM. Resulting image is displayed in 5 bitplanes with frequent mid-frame palette switching via the Copper to display a total of 96 unique colors simultaneously.</p>
