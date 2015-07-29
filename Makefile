@@ -1,13 +1,9 @@
 # www.siejak.pl Makefile
 
 .DEFAULT_GOAL = all
-.PHONY: all install clean pages data
+.PHONY: all clean pages data
 
 DESTDIR ?= /home/masterm/www/root
-INSTDIR ?= /usr/local/www/root
-
-WEBUSR ?= www
-WEBGRP ?= www
 
 all: pages
 
@@ -20,10 +16,4 @@ data:
 
 clean:
 	rm -rf $(DESTDIR)/*
-
-install:
-	mkdir -p ${INSTDIR}
-	rsync -a --delete ${DESTDIR}/ ${INSTDIR}/
-	chown -R ${WEBUSR}:${WEBGRP} ${INSTDIR}
-	ln -sf ../files/ ${INSTDIR}/files
 

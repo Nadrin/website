@@ -8,7 +8,7 @@ export DESTDIR="$1"
 export RUBYLIB=$(pwd)/scripts
 
 # programs
-erb=/usr/local/bin/erb
+erb=/usr/bin/erb
 postproc='egrep -v ^[[:space:]]*$'
 
 # paths
