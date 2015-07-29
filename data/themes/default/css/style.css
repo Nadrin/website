@@ -521,7 +521,7 @@ hr {
 .portfolio .title {
 	width: 170px;
 	height: 32px;
-	display: none;
+	display: block;
 	position: absolute;
 	left: 0px; bottom: 0px;
 	padding: 9px 40px 9px 10px;
@@ -559,7 +559,7 @@ hr {
 }
 
 .portfolio .clone {
-	display: none;
+	display: block;
 	position: absolute;
 	left: 0px; top: 0px;
 	z-index: 1;

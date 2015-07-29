@@ -195,20 +195,20 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 			/* portfolio effects */
 			$("#portfolio li a").mouseenter(function() {
 				$(this)
-					.find(".clone").show().end()
+					.find(".clone").end()
 					.parent().stop().animate({marginTop: 0}, 300).end()
 					.stop().animate({height: 210}, 300)
-					.find(".title").css({opacity: 0}).show().stop().animate({opacity: 1}, 300);
+					/*.find(".title").css({opacity: 0}).show().stop().animate({opacity: 1}, 300);*/
 			});
 		
 			$("#portfolio li a").mouseleave(function() {
 				$(this)
-					.find(".clone").hide().end()
+					.find(".clone").end()
 					.parent().stop().animate({marginTop: 25}, 300).end()
 					.stop().animate({height: 170}, 300)
-					.find(".title").stop().animate({opacity: 0}, 300, function() {
+					/*.find(".title").stop().animate({opacity: 0}, 300, function() {
 						$(this).hide();
-					});
+					});*/
 			});
 			
 			$("#portfolio li img").css({opacity: 0.7});
