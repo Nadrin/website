@@ -1,0 +1,11 @@
+name: Escape Velocity
+date: 2015
+tech: Unreal Engine 4, GearVR
+category: GameDev
+description: VR Experience in Space
+icon: /images/icons/escape_velocity.png
+vimeo: 153083701
+body: |
+  <p>Interactive virtual reality experience for <b>GearVR</b> powered by <b>UE4</b>.</p>
+  <p>In 2038 space missions are a routine thing. You are sent for standard maintenance mission to ISS – now partially decomissioned, autonomous station. How hard can it be? Unfortunately, not everything goes as planned. You'll have to use the knowledge from your astronaut training that you hoped won't ever be needed and engage in spacewalk that you didn't anticipate.</p>
+  <p>My role in this project involved <b>graphics programming</b> and <b>performance optimizations</b> for the target device. Working with a relatively limited mobile GPU proved challenging and required a lot of creative thinking when authoring visual effects. Also, for the experience to be comfortable, the application had to render at smooth 60fps.</p>
