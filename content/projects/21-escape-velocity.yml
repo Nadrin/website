@@ -5,6 +5,10 @@ category: GameDev
 description: VR Experience in Space
 icon: /images/icons/escape_velocity.png
 vimeo: 153083701
+files:
+  - { link: 'https://www.oculus.com/experiences/gear-vr/982148138522227/', title: Escape Velocity at Oculus Store }
+  - { link: 'https://www.unrealengine.com/blog/creating-escape-velocity-for-samsung-gear-vr', title: Blog entry at unrealengine.com }
+  - { link: 'http://www.vrfocus.com/2016/02/quick-look-escape-velocity/', title: VR Focus first look }
 body: |
   <p>Interactive virtual reality experience for <b>GearVR</b> powered by <b>UE4</b>.</p>
   <p>In 2038 space missions are a routine thing. You are sent for standard maintenance mission to ISS – now partially decomissioned, autonomous station. How hard can it be? Unfortunately, not everything goes as planned. You'll have to use the knowledge from your astronaut training that you hoped won't ever be needed and engage in spacewalk that you didn't anticipate.</p>
