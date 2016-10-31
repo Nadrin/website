@@ -1,6 +1,6 @@
 name: Escape Velocity
 date: 2015
-tech: Unreal Engine 4, GearVR
+tech: C++, Unreal Engine 4, GearVR
 category: GameDev
 description: VR Experience in Space
 icon: /images/icons/escape_velocity.png
