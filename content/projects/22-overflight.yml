@@ -1,0 +1,13 @@
+name: Overflight
+date: 2016
+tech: C#, Unity 5, GearVR
+category: GameDev
+description: Multiplayer VR game
+icon: /images/icons/overflight.png
+vimeo: 189618404
+files:
+  - { link: 'https://www.oculus.com/experiences/gear-vr/1035061809913798/', title: Overflight at Oculus Store }
+body: |
+  <p>Multiplayer game for <b>GearVR</b> powered by <b>Unity 5</b> engine.</p>
+  <p>You are sitting behind the plane’s controls. Not just any plane - the Spitfire. A single-seat fighter aircraft from the Second World War. Beneath, you can see mountains and deserts. Above, immaculate blue sky. You can hear loud engine noises. You actually feel the speed and turns, just like a real pilot. But wait… There are other planes on the sky and they are coming for you! That’s not a joke! Make unpredictable maneuvers, evade enemy fire and surprise them with an unexpected flank attacks. Prove yourself by shooting down as many bogeys as you can and become the king of the sky.</p>
+  <p>My involvement in this project included <b>network programming</b>, <b>UI development</b> and <b>enemy AI improvements</b>.</p>
